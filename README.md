@@ -2,15 +2,6 @@
 
 A minimal example repo showing how to configure [Dependabot](https://docs.github.com/en/code-security/dependabot) for a multi-project monorepo.
 
-## What's included
-
-| Service | Ecosystem | Path |
-|---------|-----------|------|
-| Website | npm | `services/website` |
-| Backend (dotnet) | nuget | `services/backend-dotnet` |
-| Backend (java) | maven | `services/backend-java` |
-| CI | github-actions | `/` |
-
 ## How it works
 
 - Dependabot runs weekly and checks each service for outdated dependencies

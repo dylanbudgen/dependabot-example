@@ -13,6 +13,9 @@ A minimal example repo showing how to configure [Dependabot](https://docs.github
 
 ## How it works
 
-Dependabot runs weekly and opens grouped PRs for each service — one PR per ecosystem/directory with all dependency updates bundled together. A CI workflow validates each project on every PR.
+- Dependabot runs weekly and checks each service for outdated dependencies
+- Updates are grouped into a single PR per ecosystem/directory
+- PRs are automatically labelled by ecosystem (e.g. `javascript`, `dotnet`, `java`, `ci`)
+- Open PR limit is capped at 3 per ecosystem
 
 See [`.github/dependabot.yml`](.github/dependabot.yml) for the full configuration.

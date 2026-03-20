@@ -1,0 +1,49 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /services/website
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    labels:
+      - dependencies
+      - javascript
+    groups:
+      npm-all:
+        patterns: ["*"]
+
+  - package-ecosystem: nuget
+    directory: /services/backend-dotnet
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    labels:
+      - dependencies
+      - dotnet
+    groups:
+      nuget-backend-dotnet:
+        patterns: ["*"]
+
+  - package-ecosystem: maven
+    directory: /services/backend-java
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    labels:
+      - dependencies
+      - java
+    groups:
+      maven-backend-java:
+        patterns: ["*"]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 3
+    labels:
+      - dependencies
+      - ci
+    groups:
+      actions-all:
+        patterns: ["*"]

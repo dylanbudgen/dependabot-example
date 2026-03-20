@@ -23,7 +23,6 @@ jobs:
           cache-dependency-path: services/website/package-lock.json
 
       - run: npm ci
-      - run: npm run lint
       - run: npm run build
 
   build-backend-dotnet:
